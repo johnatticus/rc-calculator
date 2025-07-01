@@ -7,7 +7,8 @@ import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@
 const tirePresets: Record<string, number> = {
   "Touring (63mm)": 63,
   "Stadium/SCT (90mm)": 90,
-  "Monster (130mm)": 130,
+  "Tenth Scale Monster (130mm)": 130,
+  "Eighth Scale Minster (169mm)": 169,
   "Custom": 0,
 };
 
@@ -47,9 +48,24 @@ export default function GearCalculator() {
       </div>
 
       <div>
-        <Label htmlFor="voltage">Battery Voltage (V)</Label>
-        <Input id="voltage" type="number" step="0.1" value={voltage} onChange={(e) => setVoltage(Number(e.target.value))} />
+        <Label htmlFor="voltage">Battery (LiPo)</Label>
+        <Select
+          onValueChange={(val) => setVoltage(Number(val))}
+          defaultValue="7.4"
+        >
+          <SelectTrigger>
+            <SelectValue placeholder="Select battery" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="7.4">2S (7.4V)</SelectItem>
+            <SelectItem value="11.1">3S (11.1V)</SelectItem>
+            <SelectItem value="14.8">4S (14.8V)</SelectItem>
+            <SelectItem value="22.2">6S (22.2V)</SelectItem>
+            <SelectItem value="29.6">8S (29.6V)</SelectItem>
+          </SelectContent>
+        </Select>
       </div>
+
 
       <div>
         <Label htmlFor="tireSize">Tire Size</Label>

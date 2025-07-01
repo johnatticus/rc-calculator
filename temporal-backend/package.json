@@ -1,0 +1,23 @@
+{
+  "name": "temporal-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@temporalio/client": "^1.11.8",
+    "@temporalio/worker": "^1.11.8",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.0.8",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}
