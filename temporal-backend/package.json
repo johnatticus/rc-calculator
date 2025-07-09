@@ -8,6 +8,7 @@
     "client:custom": "ts-node src/client.ts",
     "start": "npm run worker",
     "dev": "concurrently \"npm run worker\" \"npm run client\"",
+    "api": "ts-node src/api.ts",
     "typecheck": "tsc --noEmit"
   },
   "keywords": [],
